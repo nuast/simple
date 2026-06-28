@@ -13,18 +13,14 @@ program to accept a second command-line argument that specifies the
 type of conversion.
 '''
 
-def main():
-    print("Welcome to the calculator program!")
 
-    # Check if a command-line argument was provided
-    if len(sys.argv) == 2:
-        binary = sys.argv[1]
-    else:
-        binary = input("Enter a binary number: ")
+print("Welcome to the calculator program!")
 
-    hexadecimal = conv.bin2hex(binary)
-    print(f"The hexadecimal representation of {binary} is {hexadecimal}.")
+# Check if a command-line argument was provided
+if len(sys.argv) == 2:
+    binary = sys.argv[1]
+else:
+    binary = input("Enter a binary number: ")
 
-
-if __name__ == "__main__":
-    main()
+hexadecimal = conv.bin2hex(binary)
+print(f"The hexadecimal representation of {binary} is {hexadecimal}.")
