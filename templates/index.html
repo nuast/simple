@@ -8,7 +8,12 @@
         <button type="submit">Convert</button>
     </form>
 
+    <!-- Display a value -->
     <h1>{{ answer }}</h1> 
     
+    <!-- Apply logic  -->
+    {% if recent_inputs %}
+    <p>History : {{ recent_inputs | join(', ') }}</p>
+    {% endif %}
 </body>
 </html>
