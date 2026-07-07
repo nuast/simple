@@ -12,6 +12,17 @@ def divide(x, y):
         raise ValueError("Denominator cannot be zero.")
     return x / y
 
+def div(x, y):
+    if y == 0:
+        raise ValueError("Denominator cannot be zero.")
+    return x // y
+
+def mod(x, y):
+    if y == 0:
+        raise ValueError("Denominator cannot be zero.")
+    return x % y
+
+
 def main():
     print("Testing calculator functions...")
     assert add(3, 4) == 7
