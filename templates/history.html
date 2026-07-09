@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>Conversion History</h1>
+
+{% if recent_inputs %}
+    <ol>
+        {% for input in recent_inputs %}
+            <li>{{ input }}</li>
+        {% endfor %}
+    </ol>
+{% else %}
+    <p>No numbers have been converted yet.</p>
+{% endif %}
+
+{% endblock %}

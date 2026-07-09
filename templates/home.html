@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>Binary to Hex</h1>
+
+<form method="post">
+    <input name="binary" placeholder="Enter binary">
+    <button type="submit">Convert</button>
+</form>
+
+<p>{{ answer }}</p>
+
+{% endblock %}
