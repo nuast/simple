@@ -49,16 +49,15 @@ def hex2oct(hex):
     oct = den2oct(den)
     return oct
 
+# def oct2bin(oct):
+#     den = oct2den(oct)
+#     bin = den2bin(den)
+#     return bin
 
-def oct2bin(oct):
-    den = oct2den(oct)
-    bin = den2bin(den)
-    return bin
-
-def oct2hex(oct):
-    den = oct2den(oct)
-    hex = den2hex(den)
-    return hex
+# def oct2hex(oct):
+#     den = oct2den(oct)
+#     hex = den2hex(den)
+#     return hex
 
 if __name__ == "__main__":
     print("Testing conversion functions...")
@@ -73,3 +72,5 @@ if __name__ == "__main__":
     assert hex2bin("a") == "1010"
     assert hex2oct("a") == "12"
     print("All tests passed!")
+else:
+    print("You have imported the cs/conv.py")
