@@ -1,7 +1,7 @@
 import tkinter as tk
-from cs import CONVERSIONS, CONVERSION_LABELS
+from cs import CONVERSIONS
 
-options = {label: CONVERSIONS[code] for code, label in CONVERSION_LABELS.items()}
+options = CONVERSIONS
 
 
 def convert():

@@ -50,34 +50,16 @@ def hex2oct(hex):
     return oct
 
 CONVERSIONS = {
-    "d2b": den2bin,
-    "d2h": den2hex,
-    "d2o": den2oct,
-    "b2d": bin2den,
-    "h2d": hex2den,
-    "o2d": oct2den,
-    "b2h": bin2hex,
-    "b2o": bin2oct,
-    "h2b": hex2bin,
-    "h2o": hex2oct,
-}
-
-CONVERSION_LABELS = {
-    "d2b": "Denary → Binary",
-    "d2h": "Denary → Hex",
-    "d2o": "Denary → Octal",
-    "b2d": "Binary → Denary",
-    "b2h": "Binary → Hex",
-    "b2o": "Binary → Octal",
-    "h2d": "Hex → Denary",
-    "h2b": "Hex → Binary",
-    "h2o": "Hex → Octal",
-    "o2d": "Octal → Denary",
-}
-
-DISPLAY_CONVERSIONS = {
-    label: CONVERSIONS[code]
-    for code, label in CONVERSION_LABELS.items()
+    "Denary → Binary": den2bin,
+    "Denary → Hex": den2hex,
+    "Denary → Octal": den2oct,
+    "Binary → Denary": bin2den,
+    "Binary → Hex": bin2hex,
+    "Binary → Octal": bin2oct,
+    "Hex → Denary": hex2den,
+    "Hex → Binary": hex2bin,
+    "Hex → Octal": hex2oct,
+    "Octal → Denary": oct2den,
 }
 
 if __name__ == "__main__":
