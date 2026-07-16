@@ -15,5 +15,5 @@ if len(sys.argv) == 3:
 
 else:
     print("Usage: python run_cli.py <conversion_type> <number>")
-    print("Example: python run_cli.py -'Binary → Hex' 0111")
+    print("Example: python run_cli.py 'Binary → Hex' 0111")
     print(f"Conversion types: {', '.join(CONVERSIONS)}")
