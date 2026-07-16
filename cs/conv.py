@@ -1,7 +1,7 @@
 # Base conversion functions
 
 def den2bin(den):
-    binary = bin(den)
+    binary = bin(int(den))
     binary = binary.replace("0b", "")
     return binary
 
@@ -11,7 +11,7 @@ def den2hex(den):
     return hexadecimal
 
 def den2oct(den):
-    octal = oct(den)
+    octal = oct(int(den))
     octal = octal.replace("0o", "")
     return octal
 

@@ -2,13 +2,44 @@
 
 {% block content %}
 
-<h1>Binary to Hex</h1>
+<h1 class="mb-4">Number Converter</h1>
 
 <form method="post">
-    <input name="binary" placeholder="Enter binary">
-    <button type="submit">Convert</button>
+    <div class="mb-3">
+        <label for="conversion" class="form-label">Conversion</label>
+
+        <select name="conversion" id="conversion" class="form-select">
+            <option value="d2b">Denary to Binary</option>
+            <option value="d2h">Denary to Hexadecimal</option>
+            <option value="d2o">Denary to Octal</option>
+            <option value="b2d">Binary to Denary</option>
+            <option value="b2h">Binary to Hexadecimal</option>
+            <option value="b2o">Binary to Octal</option>
+            <option value="h2d">Hexadecimal to Denary</option>
+            <option value="h2b">Hexadecimal to Binary</option>
+            <option value="h2o">Hexadecimal to Octal</option>
+            <option value="o2d">Octal to Denary</option>
+        </select>
+    </div>
+
+    <div class="mb-3">
+        <label for="number" class="form-label">Number</label>
+
+        <input
+            type="text"
+            name="number"
+            id="number"
+            class="form-control"
+            placeholder="Enter a number"
+            required
+        >
+    </div>
+
+    <button type="submit" class="btn btn-primary">Convert</button>
 </form>
 
-<p>{{ answer }}</p>
+{% if answer %}
+    <h2 class="mt-4">Result: {{ answer }}</h2>
+{% endif %}
 
 {% endblock %}
