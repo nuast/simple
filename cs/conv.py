@@ -80,16 +80,6 @@ DISPLAY_CONVERSIONS = {
     for code, label in CONVERSION_LABELS.items()
 }
 
-# def oct2bin(oct):
-#     den = oct2den(oct)
-#     bin = den2bin(den)
-#     return bin
-
-# def oct2hex(oct):
-#     den = oct2den(oct)
-#     hex = den2hex(den)
-#     return hex
-
 if __name__ == "__main__":
     print("Testing conversion functions...")
     assert den2bin(10) == "1010"

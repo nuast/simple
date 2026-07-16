@@ -16,4 +16,4 @@ if len(sys.argv) == 3:
 else:
     print("Usage: python run_cli.py <conversion_type> <number>")
     print("Example: python run_cli.py -b2h 0111")
-    print("Conversion types: d2b, d2h, d2o, b2d, h2d, o2d, b2h, b2o, h2b, h2o, o2b, o2h")
+    print(f"Conversion types: {', '.join(CONVERSIONS)}")
