@@ -1,23 +1,5 @@
 import tkinter as tk
-from cs import (
-    den2bin, den2hex, den2oct,
-    bin2den, bin2hex, bin2oct,
-    hex2den, hex2bin, hex2oct,
-    oct2den
-)
-
-conversions = {
-    "Denary → Binary": den2bin,
-    "Denary → Hex": den2hex,
-    "Denary → Octal": den2oct,
-    "Binary → Denary": bin2den,
-    "Binary → Hex": bin2hex,
-    "Binary → Octal": bin2oct,
-    "Hex → Denary": hex2den,
-    "Hex → Binary": hex2bin,
-    "Hex → Octal": hex2oct,
-    "Octal → Denary": oct2den
-}
+from cs import DISPLAY_CONVERSIONS
 
 
 def convert():
@@ -28,7 +10,7 @@ def convert():
         if conversion.startswith("Denary"):
             number = int(number)
 
-        answer = conversions[conversion](number)
+        answer = DISPLAY_CONVERSIONS[conversion](number)
         result_var.set(str(answer).upper())
 
     except Exception:
@@ -51,7 +33,7 @@ tk.Label(window, text="Conversion:").grid(
 )
 
 conversion_var = tk.StringVar(value="Binary → Hex")
-tk.OptionMenu(window, conversion_var, *conversions).grid(
+tk.OptionMenu(window, conversion_var, *DISPLAY_CONVERSIONS).grid(
     row=1, column=1, sticky="w", padx=5, pady=5
 )
 
